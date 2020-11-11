@@ -1,6 +1,6 @@
 # The Data Shed usage
 
-This repo (and the dependecy pywb) has been forked to make changes to allow uploads of archives and indexes to S3. You will need to set up aws credentials locally. Note the AWS_PROFILE and S3BUCKET environment variables are set.
+This repo (and the dependecy pywb) has been forked to make changes to allow uploads of archives and indexes to S3. You will need to set up aws credentials locally. Note the AWS_PROFILE and AWS_S3_BUCKET environment variables are set.
 
 ```
 docker run \
