@@ -7,7 +7,7 @@ docker run \
     --volume $(pwd)/crawls:/crawls \
     --volume '/path/to/.aws:/root/.aws:ro' \
     --env AWS_PROFILE=myprofile \
-    --env S3BUCKET=mybucket \
+    --env AWS_S3_BUCKET=mybucket \
     --cap-add=SYS_ADMIN \
     --cap-add=NET_ADMIN \
     --shm-size=1g \
