@@ -14,7 +14,7 @@ ENV PROXY_HOST=localhost \
     DISPLAY=:99 \
     GEOMETRY=1360x1020x16
 
-RUN pip install git+https://github.com/webrecorder/pywb@patch-work
+RUN pip install git+https://github.com/TheDataShed/pywb@add_s3_uploader
 
 RUN pip install uwsgi 'gevent>=20.9.0'
 
