@@ -1,3 +1,27 @@
+# The Data Shed usage
+
+This repo (and the dependecy pywb) has been forked to make changes to allow uploads of archives and indexes to S3. You will need to set up aws credentials locally. Note the AWS_PROFILE and S3BUCKET environment variables are set.
+
+```
+docker run \
+    --volume $(pwd)/crawls:/crawls \
+    --volume '/home/james/.aws:/root/.aws:ro' \
+    --env AWS_PROFILE=who-sandbox \
+    --env S3BUCKET=pywbarchive \
+    --cap-add=SYS_ADMIN \
+    --cap-add=NET_ADMIN \
+    --shm-size=1g \
+    --rm \
+    --interactive \
+    --tty \
+    browsertrix-crawler \
+    crawl \
+    --url https://webrecorder.net/ \
+    --generateCDX \
+    --collection $(uuid -v4) \
+    --limit 1
+```
+
 # Browsertrix Crawler
 
 Browsertrix Crawler is a simplified browser-based high-fidelity crawling system, designed to run a single crawl in a single Docker container. It is designed as part of a more streamlined replacement of the original [Browsertrix](https://github.com/webrecorder/browsertrix).
