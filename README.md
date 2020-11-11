@@ -5,9 +5,9 @@ This repo (and the dependecy pywb) has been forked to make changes to allow uplo
 ```
 docker run \
     --volume $(pwd)/crawls:/crawls \
-    --volume '/home/james/.aws:/root/.aws:ro' \
-    --env AWS_PROFILE=who-sandbox \
-    --env S3BUCKET=pywbarchive \
+    --volume '/path/to/.aws:/root/.aws:ro' \
+    --env AWS_PROFILE=myprofile \
+    --env S3BUCKET=mybucket \
     --cap-add=SYS_ADMIN \
     --cap-add=NET_ADMIN \
     --shm-size=1g \
